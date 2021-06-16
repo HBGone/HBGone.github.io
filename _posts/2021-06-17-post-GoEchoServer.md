@@ -1,15 +1,20 @@
 ---
-title: "Post: Notice"
+title: "Golang Echo Server/Client"
 categories:
   - Blog
+toc: true
 tags:
   - golang
   - network
 ---
 
+# Project 개요
 
+# 보완할 점
 
-server
+# 코드
+
+## Echo Server
 
 ```golang
 package main
@@ -60,7 +65,7 @@ func handleEchoClient(conn net.Conn)  {
 }
 ```
 
-client
+## Echo Client
 
 ```golang
 package main
