@@ -37,6 +37,7 @@ for {
 		- Accept 함수 이후 handleEchoClient()를 수행하게 되면 앞서 언급한 연결 유지를 위해 for문으로 무한 루프가 수행중이기 때문에 기존의 socket의 Accept함수를 수행할수 없어 또 다른 소켓을 생성해야만 합니다.
 		- Accept 수행 로직과 handleEchoClient(이하 메세지 로직)을 분리하기 위해서는 서로 다른 스레드로 각 로직을 수행해야 합니다.
 		- 또한 Accept 함수를 재사용하기 위해 Accept 수행 로직을 for문으로 반복 시켜야 합니다.
+
 ```golang
 for {
 	conn, err := listener.AcceptTCP()
@@ -48,6 +49,7 @@ for {
 	go handleEchoClient(conn)
 }
 ```
+
 ```mermaid
 %%{init: {'securityLevel': 'strict', 'theme':'neutral'}}%%
 		graph LR
@@ -67,14 +69,9 @@ for {
 		handleEchoClient_1
 		end
 ```
+
 ### Client Side
 1. Connection 유지
-```golang
-
-```
-
-
-
 
 # 코드
 
