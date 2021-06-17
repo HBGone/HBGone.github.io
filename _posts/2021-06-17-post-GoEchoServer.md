@@ -13,7 +13,7 @@ golang에서 제공하는 network 함수들을 이용해서 기본적인 Echo Se
 
 # Network 함수들 동작 방식
 
-![alt]({{ site.url }}{{ site.baseurl }}/assets/images/golang/socekt_flowchart.png)
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/golang/socket_flowchart.png)
 
 
 # 코드
