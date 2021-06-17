@@ -1,5 +1,5 @@
 ---
-title: "Golang Echo Server/Client"
+title: "Golang Echo Server/Client #1"
 categories:
   - Blog
 toc: true
@@ -12,6 +12,9 @@ tags:
 golang에서 제공하는 network 함수들을 이용해서 기본적인 Echo Servre/Client를 작성하고 필요한 것들을 기록
 
 # Network 함수들 동작 방식
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/golang/socekt_flowchart.png)
+
 
 # 코드
 
@@ -31,13 +34,11 @@ func main() {
 
 	addr := "0.0.0.0:18080"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", addr)
-
 	if err != nil {
-		fmt.Println("Error occurred : s%", err.Error())
+		fmt.Println("Error occurred : ", err.Error())
 	}
 
 	listener, err := net.ListenTCP("tcp", tcpAddr)
-
 	if err != nil {
 		fmt.Println("Error occurred : s%", err.Error())
 	}
