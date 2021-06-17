@@ -8,9 +8,10 @@ tags:
   - network
 ---
 
-# Project 개요
+# 개요
+golang에서 제공하는 network 함수들을 이용해서 기본적인 Echo Servre/Client를 작성하고 필요한 것들을 기록
 
-# 보완할 점
+# Network 함수들 동작 방식
 
 # 코드
 
@@ -82,13 +83,13 @@ func main()  {
 
 	addr := "localhost:18080"
 
-	fmt.Println("Input Msg : ")
-	data, err := bufio.NewReader(os.Stdin).ReadString('\n')
+	conn, err := net.Dial("tcp", addr)
 	if err != nil {
 		fmt.Println("Error occurred : s%", err.Error())
 	}
 
-	conn, _ := net.Dial("tcp", addr)
+	fmt.Println("Input Msg : ")
+	data, err := bufio.NewReader(os.Stdin).ReadString('\n')
 	if err != nil {
 		fmt.Println("Error occurred : s%", err.Error())
 	}
@@ -106,3 +107,5 @@ func main()  {
 	conn.Close()
 }
 ```
+
+## 보완할 점
