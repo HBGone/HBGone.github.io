@@ -121,7 +121,7 @@ func main()  {
 ```
 
 ## 보완할 점
-	1. Connection 유지
+1. Connection 유지
 		- 현재 한번 Echo 작업 수행후 Connection이 끊어짐
-	2. Single Connection
+2. Single Connection
 		- 현재 한번에 하나의 커넥션만 가능하기 때문에 한번에 여러 커넥션이 가능하도록 변경
