@@ -18,6 +18,7 @@ golang에서 제공하는 network 함수들을 이용해서 기본적인 Echo Se
 	1. __Binding__ : IP / Port 할당
 	2. __Listening__ : 클라이언트 요청 대기
 	3. __Accept__ : 클라이언트 요청 확인 및 연결 소켓 생성
+
 ## Client Side
 - Client는 Server로 접속해야 한다. 때문에 Client는 Server에 대한 정보를 알아야 하며 해당 정보를 이용해 접속해야 합니다. 이때 기본적으로 필요한 정보는 IP / Port입니다. Server가 Listening 상태일 때 Client는 다음과 같은 작업을 수행하여 Server로 접속 가능합니다.
 	1. __Connect__ : IP / Port 를 이용하여 Server에 접속
