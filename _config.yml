@@ -54,6 +54,9 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-mermaid
+  - jekyll-spaceship
+  
 
 author:
   name   : "HB"
